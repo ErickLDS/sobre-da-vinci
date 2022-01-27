@@ -1,0 +1,458 @@
+body {
+	background-color: #262626;
+}
+
+/*Main*/
+#main {
+	z-index: 1000;
+	position: relative;
+	padding-bottom: 2%;
+	background-image: url("../img/obra-bg.jpg");
+	background-size: cover;
+	background-position: center;
+	background-repeat: no-repeat;
+	background-attachment: fixed;
+}
+
+#wave img {
+	width: 100%;
+	position: absolute;
+	bottom: 0;
+	z-index: 1;
+	margin-bottom: -2%;
+}
+
+
+/* Barra de navegação */
+#navbar {
+	background-color: rgba(0,0,0,0);
+}
+
+#navbar a {
+	font-family: "Rubik", sans-serif;
+	color: white;
+	opacity: .6;
+	font-size: 18px;
+	transition: .2s ease-in-out;
+	border: 2px solid transparent;
+}
+
+#navbar a:hover {
+	opacity: 1;
+}
+
+.navbar-toggler-icon {
+	color: white;
+	opacity: .6;
+	font-size: 1.2em;
+	height: 100%;
+}
+
+
+/*Imagens e texto do Main*/
+#img-leo {
+	width: 100%;
+	display: flex;
+	justify-content: flex-end;
+}
+
+#img-leo img {
+	width: 100%;
+}
+
+#text-main {
+	width: 100%;
+	margin-left: 3%;
+}
+
+#titulo {
+	z-index: 1000;
+	font-size: 45px;
+	color: #ffd9b8;
+	font-weight: 700;
+}
+
+#main-cont {
+	flex-direction: row;
+}
+
+#main-text {
+	z-index: 1000;
+	font-size: 18px;
+	color: white;
+	text-indent: 20px;
+}
+
+
+/* Textos */
+.subtitulo {
+	text-transform: uppercase;
+	font-size: 40px;
+	color: #ffd9b8;
+	font-weight: 700;
+}
+
+.text {
+	z-index: 1000;
+	font-size: 16px;
+	color: black;
+	text-indent: 10px;
+	font-family: "Rubik", sans-serif;
+}
+
+
+/* Cards */
+.card {
+	border-radius: 10px;
+	background-color: #f5f5f5;
+	border: none;
+	width: 28%;
+	margin: 0 2% 6%;
+}	
+
+.card-img-top {
+	border-radius: 10px 10px 0 0;
+}
+
+.card-title {
+	text-transform: uppercase;
+	font-weight: 700;
+	font-size: 20px;
+}
+
+
+/* Botões Cards*/
+.button-cont {
+	height: 100%;
+	display: flex;
+}
+
+.btn-img {
+	align-self: flex-end;
+	background-color: transparent;
+	border: 2px solid black;
+	padding: 2% 4%;
+	border-radius: 15px;
+	font-size: 14px;
+	font-family: "Rubik", sans-serif;
+	position: relative;
+	z-index: 1000;
+	transition: .2s ease-in-out;
+	text-transform: uppercase;
+}
+
+.btn-img::before {
+	content: "";
+	width: 100%;
+	height: 100%;
+	background-color: black;
+	left: 0;
+	top: 0;
+	border-radius: 12px;
+	z-index: -1;
+	position: absolute;
+	transition: .2s ease-out;
+	clip-path: circle(0 at center 50%);
+}
+
+.btn-img:hover {
+	color: white;
+}
+
+.btn-img:hover::before {
+	clip-path: circle(180px at center 50%);
+}
+
+.button-fechar {
+	background-color: transparent;
+	color: white;
+	font-size: 30px;
+	position: absolute;
+	top: 0;
+	padding: 1% 2%;
+}
+
+.btn-subir {
+	position: fixed;
+	bottom: 0;
+	right: 0;
+}
+
+#btn-subir {
+	display: none;
+	font-size: 35px;
+	background-color: transparent;
+	color: white;
+}
+
+/* Imagens em tela cheia */
+.img-view {
+	display: none;
+	align-items: center;
+	width: 100%;
+	height: 100%;
+	top: 0;
+	left: 0;
+	position: fixed;
+	z-index: 8888;
+	background-color: rgba(0,0,0,.9);
+}
+
+.img-cont {
+	display: flex;
+	justify-content: center;
+	align-self: center;
+	width: 100%;
+}
+
+.img-cont img {
+	width: 35%;
+}
+
+#ceia {
+	width: 80%;
+}
+
+
+/* Invenções */
+.card-horizontal img {
+	width: 30%;
+}
+
+.text-cont .title {
+	font-size: 35px;
+	color: white;
+	font-weight: 700;
+}
+
+.text-cont .text {
+	color: white;
+	font-size: 18px;
+	font-family: sans-serif;
+	text-indent: 25px;
+}
+
+.card-horizontal {
+	flex-direction: row;
+}
+
+.text-cont {
+	width: 50%;
+	align-self: center;
+}
+
+
+/* Rodape */
+#footer p {
+	color: #adadad;
+	font-size: 14px;
+	font-family: "Rubik", sans-serif;
+}
+
+
+/* Ipad Pro */
+@media screen and (max-width: 1180px) {
+	#titulo {
+		font-size: 40px;
+	}
+
+	.subtitulo {
+		font-size: 35px;
+	}
+
+	.text-cont .title {
+		font-size: 30px;
+	}
+
+	.card {
+		width: 40%;
+	}
+
+	.img-cont img {
+		width: 70%;
+	}
+
+	#ceia {
+		width: 90%;
+	}
+
+	.button-fechar {
+		padding: 2% 4%;
+		font-size: 50px;
+	}
+
+	.text-cont {
+		width: 70%;
+	}
+
+	.card-horizontal img {
+		width: 40%;
+		align-self: center;
+		margin-bottom: 6%;
+	}
+
+	.card-horizontal {
+		flex-direction: column;
+	}
+}
+
+
+/* Ipad */
+@media screen and (max-width: 850px) {
+	#navbar {
+		background-color: rgba(0,0,0,.7);
+	}
+
+	.card {
+		width: 45%;
+	}
+
+	#text-main {
+		width: 80%;
+		margin-left: 0;
+	}
+
+	#titulo {
+		font-size: 35px;
+	}
+
+	.subtitulo {
+		font-size: 30px;
+	}
+
+	#main-text {
+		font-size: 20px;
+	}
+
+	#main-cont {
+		flex-direction: column;
+	}
+
+	.text-cont {
+		width: 90%;
+	}
+
+	.img-cont img {
+		width: 85%;
+	}
+}
+
+
+
+/* Tablet */
+@media screen and (max-width: 650px) {
+	.card {
+		width: 55%;
+	}
+
+	.card-horizontal img {
+		width: 70%;
+		margin-bottom: 10%;
+	}
+
+}
+
+
+/* Surface Duo */
+@media screen and (max-width: 550px) {
+	#navbar a:hover {
+		opacity: .6;
+	}
+
+	#main {
+		background-attachment: scroll;
+	}
+
+	.card {
+		width: 80%;
+		margin-bottom: 12%;
+	}
+
+	.card-horizontal img {
+		width: 60%;
+		margin-bottom: 10%;
+	}
+
+	.button-fechar {
+		padding: 2% 4%;
+		font-size: 30px;
+	}
+}
+
+
+/* Iphone 6/7/8 */
+@media screen and (max-width: 440px) {
+	#text-main {
+		width: 100%;
+	}
+
+	#main-cont img {
+		width: 100%;
+	}
+
+	#titulo {
+		font-size: 35px;
+	}
+
+	.card {
+		width: 90%;
+		margin-bottom: 12%;
+	}
+
+	.text {
+		font-size: 17px;
+	}
+
+	.text-cont {
+		width: 95%;
+	}
+
+	#footer p {
+		font-size: 12px;
+	}
+}
+
+
+/* Iphone 5 */
+@media screen and (max-width: 360px) {
+	#titulo {
+		font-size: 18px;
+	}
+
+	#main-text {
+		font-size: 16px;
+	}
+
+	.subtitulo {
+		font-size: 20px;
+	}
+
+	.card-title {
+		font-size: 16px;
+	}
+
+	.text {
+		font-size: 15px;
+	}
+
+	.card-horizontal img {
+		width: 90%;
+		margin-bottom: 20%;
+	}
+
+	.text-cont {
+		width: 100%;
+	}
+
+	.text-cont .title {
+		font-size: 16px;
+	}
+
+	.text-cont .text {
+		font-size: 15px;
+	}
+
+	#footer p {
+		font-size: 10px;
+	}
+}
